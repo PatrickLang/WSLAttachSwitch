@@ -37,10 +37,10 @@ namespace WSLAttachSwitch
         {
             try
             {
-                var systems = ComputeSystem.Enumerate(new { Owners = new[] { "WSL" } });
+                var systems = ComputeSystem.Enumerate(new { Owners = new[] { "Windows Subsystem for Android(TM)" } });
                 if (systems.Length != 1)
                 {
-                    Console.Error.WriteLine("Can't find unique WSL VM. Is WSL2 running?");
+                    Console.Error.WriteLine("Can't find unique Windows Subsystem for Android(TM) VM. Is it running?");
                     return false;
                 }
                 var systemid = systems[0].GetProperty("Id").GetString();
